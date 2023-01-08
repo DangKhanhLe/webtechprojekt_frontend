@@ -1,5 +1,5 @@
 <template>
-  <h1>Todolist Title</h1>
+  <h1>Todolist</h1>
   <table class="table table-striped table-hover">
     <thead>
     <tr style="background-color: lightgray">

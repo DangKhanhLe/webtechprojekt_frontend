@@ -1,7 +1,8 @@
 <template>
   <div class="home">
-    <HelloWorld msg="To Do List App"/>
+    <HelloWorld msg="Welcome to this ToDoList App"/>
   </div>
+  <button type="button" class="btn btn-outline-primary"><a :href="'/alltodolists'">Get Started</a></button>
 </template>
 
 <script>

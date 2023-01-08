@@ -9,7 +9,7 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <router-link class="nav-link" to="/">Home</router-link>
           <router-link class="nav-link" to="/alltodolists">AllToDoLists</router-link>
-          <router-link class="nav-link" to="/persons">Persons</router-link>
+<!--          <router-link class="nav-link" to="/persons">Persons</router-link>-->
         </ul>
 <!--        <form class="d-flex" role="search">-->
 <!--          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">-->
