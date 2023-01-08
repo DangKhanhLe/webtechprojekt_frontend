@@ -5,19 +5,28 @@
     <tr>
       <th scope="col">Title</th>
       <th scope="col">Description</th>
+      <th scope="col">See more</th>
     </tr>
     </thead>
     <tbody>
     <tr v-for="todolist in toDoLists" :key="todolist.id">
-      <td><a href="/todolist">{{ todolist.title }}</a></td>
-      <td><a href="/todolist">{{ todolist.description }}</a></td>
+      <td>{{ todolist.title }}</td>
+      <td>{{ todolist.description }}</td>
+<!--      <td><a href="/todolist">click here </a></td>-->
+      <td><a :href="'/todolist/' + todolist.id">click here </a></td>
     </tr>
     </tbody>
   </table>
 </template>
 
 <script>
+
+// import ToDoList from '@/views/ToDoList.vue'
+
 export default {
+  // components: {
+  //   ToDoList
+  // },
   name: 'AllToDoLists',
   data () {
     return {
