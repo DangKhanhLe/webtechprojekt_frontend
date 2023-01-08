@@ -6,6 +6,7 @@ import AllToDoLists from '@/views/AllToDoLists'
 import AddTask from '@/views/AddTask'
 import AddToDoList from '@/views/AddToDoList'
 import UpdateTask from '@/views/UpdateTask'
+import UpdateTodolist from '@/views/UpdateTodolist'
 
 const routes = [
   {
@@ -42,6 +43,11 @@ const routes = [
     path: '/updatetask/:taskID',
     name: 'UpdateTask',
     component: UpdateTask
+  },
+  {
+    path: '/updatelist/:listID',
+    name: 'UpdateList',
+    component: UpdateTodolist
   }
 ]
 

@@ -14,8 +14,8 @@
     <tr v-for="todolist in toDoLists" :key="todolist.id">
       <td>{{ todolist.title }}</td>
       <td>{{ todolist.description }}</td>
-      <td><a :href="'/todolist/' + todolist.id">click here </a></td>
-      <td>Edit</td>
+      <td><a :href="'/todolist/' + todolist.id">Click here to see your Tasks</a></td>
+      <td><a :href="'/updatelist/' + todolist.id">Edit List Title and Description</a></td>
       <td><button type="button" class="btn btn-outline-primary" @click="deleteTodolist(todolist.id)">Delete List</button></td>
     </tr>
     <tr>

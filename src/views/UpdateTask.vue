@@ -1,6 +1,6 @@
 <template>
   <h1>Edit your Task</h1>
-  <form action="/action_page.php">
+  <form>
     <label for="title">Task: </label>
     <input type="text" id="title" name="title" :value="this.CurrentTaskTitle"><br><br>
     <label for="duedate">Due Date: </label>

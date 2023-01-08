@@ -19,6 +19,7 @@
         <td><button type="button" class="btn btn-outline-primary" @click="deleteTask(task.id)">Delete Task</button></td>
         <td v-if="task.completed === true" class="true"><input type = "checkbox" checked></td>
         <td v-else class="false"><input type = "checkbox"></td>
+<!--        <td><input type="checkbox" id="completed" name="completed" :value=task.completed v-model="task.completed" @click="updateCheckbox(task.id, task.title, task.dueDate, task.completed, task.toDoListId)"></td>-->
       </tr>
       <tr>
         <td colspan="5"><a :href="'/addtask/' + this.listID">add task</a></td>
@@ -34,8 +35,13 @@ export default {
   data () {
     return {
       tasks: [],
-      toDoLists: [],
-      listID: this.$route.params.listID
+      listID: this.$route.params.listID,
+      payload: {
+        title: undefined,
+        dueDate: undefined,
+        completed: undefined,
+        toDoListId: undefined
+      }
     }
   },
   methods: {
@@ -49,6 +55,22 @@ export default {
         .then(response => response.json())
 
       location.reload()
+    },
+    updateCheckbox (id, title, date, status, listID) {
+      this.payload.title = title
+      this.payload.dueDate = date
+      this.payload.completed = status
+      this.payload.toDoListId = listID
+
+      const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/tasks/' + id
+      const requestOptions = {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(this.payload)
+      }
+
+      fetch(endpoint, requestOptions)
+        .then(response => response.json)
     }
   },
   mounted () {
