@@ -7,8 +7,8 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <router-link class="nav-link" to="/">Home</router-link>
-          <router-link class="nav-link" to="/alltodolists">AllToDoLists</router-link>
+          <router-link class="nav-link" to="/" data-test="texthome">Home</router-link>
+          <router-link class="nav-link" to="/alltodolists" data-test="texttodo">AllToDoLists</router-link>
 <!--          <router-link class="nav-link" to="/persons">Persons</router-link>-->
         </ul>
 <!--        <form class="d-flex" role="search">-->
