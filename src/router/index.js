@@ -3,6 +3,9 @@ import HomeView from '../views/HomeView.vue'
 import ToDoList from '../views/ToDoList.vue'
 import Persons from '@/views/Persons'
 import AllToDoLists from '@/views/AllToDoLists'
+import AddTask from '@/views/AddTask'
+import AddToDoList from '@/views/AddToDoList'
+import UpdateTask from '@/views/UpdateTask'
 
 const routes = [
   {
@@ -11,7 +14,7 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/todolist',
+    path: '/todolist/:listID',
     name: 'ToDoList',
     component: ToDoList
   },
@@ -24,6 +27,21 @@ const routes = [
     path: '/alltodolists',
     name: 'AllToDoLists',
     component: AllToDoLists
+  },
+  {
+    path: '/addtask/:listID',
+    name: 'AddTask',
+    component: AddTask
+  },
+  {
+    path: '/addtodolist',
+    name: 'AddToDoList',
+    component: AddToDoList
+  },
+  {
+    path: '/updatetask/:taskID',
+    name: 'UpdateTask',
+    component: UpdateTask
   }
 ]
 
